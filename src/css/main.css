@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Montserrat:wght@300&family=Rubik&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #eee;
+}
+
+/* HEADER */
+
+.header{
+    height: 25vh;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    position: relative;
+}
+
+.title{ 
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    animation: "title-animation" 1s linear .5s alternate forwards; 
+    text-align: center;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+
+@keyframes title-animation {
+    0% {left: 50%; top: -50%;}
+    80% {left: 50%; top: 55%;}
+    100% {left: 50%; top: 50%;}
+}
+
+/* MAIN  */
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    
+}
+
+.btn{
+    padding: .5rem 2rem;
+    background-color: rgb(153, 45, 45);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: "btn-animation" 1s linear 2s alternate forwards; 
+}
+
+@keyframes btn-animation {
+    100% {opacity: 1;}
+}
+
+.btn:hover{
+    background-color: rgb(0, 81, 255);
+    color: white;
+    transition: all 0.2s ease-in;
+}
+
+
+/* MOVİE AREA  */
+
+
+.movie-area{
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 1rem;
+}
+.movie-area-left{
+    width: 15vw;
+}
+.movie-area-left img{
+    width: 15vw;
+}
+.movie-area-mid{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.movie-title{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 3rem;
+}
+.movie-description{
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2rem;
+}
+.description-title{
+    font-size: 2rem;
+}
+.movie-area-right{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.2rem;
+}
+.movie-area-right-items{
+    display: flex;
+    gap: 1rem;
+}
